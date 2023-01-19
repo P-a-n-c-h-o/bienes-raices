@@ -8,23 +8,26 @@ block contenido
     div(class="py-5 ")
         h1(class="text-center text-4xl font-extrabold") Ubicacion en el Mapa
 
-        div(class="flex flex-col md:flex-row items-center py-10 gap-4")
+        div(class="flex flex-col md:flex-row items-center text-center py-10 gap-6")
             h2(class="text-sm uppercase text-gray-800 font-bold") Filtrar Propiedades:
 
-            div(class="w-full md:w-auto flex items-center gap-2")
+            div(class="w-full md:w-auto flex items-center gap-4")
                 label(for="categorias" class="text-sm w-24 uppercase text-gray-500 font-bold") Categorias
                 select(id="categorias" class="flex-1 bg-white w-full px-3 py-2 border border-gray-300 rounded-md shadow")
-                    option(value="") - Seleccione  -
+                    option(value="") - Seleccione -
                     each categoria in categorias
                         option(value=categoria.id)= categoria.nombre
 
-            div(class="w-full md:w-auto flex items-center gap-2")
-                label(for="precios" class="text-sm w-24 uppercase text-gray-500 font-bold") Precios 
+            div(class="w-full md:w-auto flex items-center ")
+                label(for="precios" class="text-sm w-24 uppercase text-gray-500 font-bold gap-0") Precios
                 select(id="precios" class="flex-1 bg-white w-full px-3 py-2 border border-gray-300 rounded-md shadow")
-                    option(value="") - Seleccione  -
+                    option(value="") - Seleccione -
                     each precio  in precios 
                         option(value=precio.id)= precio.nombre
 
+            div(class="flex flex-col md:flex-row items-center py-10 gap-6")
+                nav(class="text-sm uppercase text-gray-800 font-bold")
+                    a(href="/mis-propiedades" class="flex-1 bg-indigo-600 hover:bg-indigo-400 rounded-lg text-white uppercase font-bold p-2 cursor-pointer text-sm") Mis Propiedades
 
         div(id="mapa-inicio" class="h-[600px] mt-5")
 

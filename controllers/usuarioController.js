@@ -73,7 +73,7 @@ const autenticar = async (req, res) => {
         httpOnly: true,
         //secure:true,
         //sameSite: true
-    }).redirect('/mis-propiedades')
+    }).redirect('/')
 }
 
 const cerrarSesion = (req, res) => {
