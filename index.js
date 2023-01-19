@@ -45,9 +45,19 @@ app.use('/auth', usarioRoutes)
 app.use('/', propiedadesRoutes)
 app.use('/api', apiRoutes)
 
+app.use((error, req, res,next) =>{
+    res.locals.mensaje = error.message;
+    const status = error.status || 4000;
+    res.locals.status = status;
+    res.status(status);
+    res.render('error');
+})
+
+//dejar que heroku asigne el puerto 
+const host= '0.0.0.0';
+const port = process.env.PORT || 3000;
 
 //definir un puerto y arrancar el proyecto
-const port = process.env.PORT || 3000;
-  app.listen(port, () => {
+  app.listen(port, host,() => {
     console.log(`EL SERVIDOR ESTA FUNCIONANDO EN EL PUERTO ${port}`)
 });
