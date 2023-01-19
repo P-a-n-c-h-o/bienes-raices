@@ -47,7 +47,7 @@ app.use('/api', apiRoutes)
 
 app.use((error, req, res,next) =>{
     res.locals.mensaje = error.message;
-    const status = error.status || 4000;
+    const status = error.status || 10000;
     res.locals.status = status;
     res.status(status);
     res.render('error');
