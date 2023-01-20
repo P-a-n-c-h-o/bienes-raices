@@ -47,7 +47,7 @@ app.use('/api', apiRoutes)
 
 app.use((error, req, res,next) =>{
     res.locals.mensaje = error.message;
-    const status = error.status || 10000;
+    const status = error.status || 3306;
     res.locals.status = status;
     res.status(status);
     res.render('error');
@@ -55,7 +55,7 @@ app.use((error, req, res,next) =>{
 
 //dejar que heroku asigne el puerto 
 const host= '0.0.0.0';
-const port = process.env.PORT || 10000;
+const port = process.env.PORT ||  3306;
 
 //definir un puerto y arrancar el proyecto
   app.listen(port, host,() => {
