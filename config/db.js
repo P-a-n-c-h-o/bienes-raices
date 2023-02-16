@@ -3,7 +3,7 @@ import dotenv from 'dotenv'
 dotenv.config({path: '.env'})
 
 const db = new Sequelize('bienesraices_node_mvc', 'root', '2021GTL2030', {
-    host: 'localhost',
+    host: '127.0.01',
     port: 3306,
     dialect: 'mysql',
     define: {
