@@ -9,6 +9,7 @@ const emailRegistro = async (datos) => {
             pass: process.env.EMAIL_PASS
         }
     });
+    
 
     const { email, nombre, token } = datos
 
