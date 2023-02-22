@@ -9,7 +9,6 @@ const db = new Sequelize(process.env.BD_NOMBRE, process.env.BD_USER, process.env
    define: {
       timestamps:true
    },
-   socketPath: '/Applications/MAMP/tmp/mysql/mysql.sock',
    pool: {
       max: 5,   
       min: 0,

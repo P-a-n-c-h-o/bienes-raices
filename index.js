@@ -45,9 +45,11 @@ app.use('/auth', usarioRoutes)
 app.use('/', propiedadesRoutes)
 app.use('/api', apiRoutes)
 
+const host= '0.0.0.0';
+
 
 //definir un puerto y arrancar el proyecto
 const port = process.env.PORT || 3001;
-  app.listen(port, () => {
+  app.listen(port,host, () => {
     console.log(`EL SERVIDOR ESTA FUNCIONANDO EN EL PUERTO ${port}`)
 });
