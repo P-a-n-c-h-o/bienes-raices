@@ -18,5 +18,9 @@ const db = new Sequelize(process.env.BD_NOMBRE, process.env.BD_USER, process.env
    operatorAliases: false
 
 });
+//Checking connection status
+
+
+
 
 export default db;
