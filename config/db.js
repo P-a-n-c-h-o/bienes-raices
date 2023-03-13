@@ -3,7 +3,7 @@ import dotenv from 'dotenv'
 dotenv.config({path: '.env'})
 
 const db = new Sequelize('realState', 'root', 'Index.jf2030', {
-   host: 'localhost',
+   host: '127.0.0.1',
    port: 3306,
    dialect: 'mysql',
    define: {
